@@ -124,7 +124,7 @@
         if (newGuild.vanityURLCode === null) return; // URL yoksa bişi yapmasın.  
         if (oldGuild.vanityURLCode === newGuild.vanityURLCode) return; // URL'ler aynıysa bişi yapmasın.                                                
         if (matthe.bots.includes(entry.executor.id)) return;
-        if (matthe.owners.includes(entry.executor.id)) return;
+        if (matthe.owners.includes(entry.executor.id)) return;// Youtube: Matthe             
         if (matthe.guvenlid.includes(entry.executor.id)) return;
         newGuild.roles.cache.forEach(async function (jahky) {
             if (jahky.permissions.has("ADMINISTRATOR") || jahky.permissions.has("BAN_MEMBERS") || jahky.permissions.has("MANAGE_GUILD") || jahky.permissions.has("KICK_MEMBERS") || jahky.permissions.has("MANAGE_ROLES") || jahky.permissions.has("MANAGE_CHANNELS")) {
@@ -618,36 +618,6 @@
             channel.send(`@everyone`, { embed: jahky })
             return client.users.cache.get(ayarlar.sahip).send(`**Sunucuya Bir Bot Eklendi! Eklenen Botun Bilgileri Ve Ekliyen Kişinin Bilgileri :** \n**Botun Adı :** \`\`${member.user.tag}\`\` **Botun İdsi :** \`\`${member.id}\`\` \n**Kullanıcı Adı :** \`\`${xd.tag}\`\` **Kullanıcı İdsi :** \`\`${xd.id}\`\``)
         }
-    });
-
-    client.on("guildBanRemove", async (guild, user) => {
-        const entry = await member.guild
-            .fetchAuditLogs({ type: "MEMBER_BAN_REMOVE" })
-            .then(audit => audit.entries.first());
-        if (!entry || !entry.executor || Date.now() - entry.createdTimestamp > 10000) return;
-        if (matthe.bots.includes(entry.executor.id)) return;
-        if (matthe.owners.includes(entry.executor.id)) return;
-        if (matthe.guvenlid.includes(entry.executor.id)) return;
-        entry.roles.set([ayarlar.karantinarol]).catch(err => { })
-        member.guild.membes.ban(entry.executor.id, { reason: "İzinsiz Ban Açma!" });
-        member.guild.members.ban(user.id, { reason: "Ban Açma Koruma Sistemi!" });
-        let channel = client.channels.cache.get(ayarlar.log1)
-        if (!channel) return console.log('Ban Açma Koruma Logu Yok!');
-        const jahky = new Discord.MessageEmbed()
-            .setTimestamp()
-            .setColor(ayarlar.color)
-            .setFooter(ayarlar.footer)
-            .setDescription(`
-  **İzinsiz Ban Açıldı!**
-  
-  **Yetkili Bilgisi**
-  **${entry.executor.tag}** **||** **${entry.executor.id}**
-  
-  **Kullanıcı Bilgisi Bilgisi**
-  **${user.tag}** **||** **${user.id}**
-  
-  **Kullanıcı Yeniden Banlandı ve yetkili jaile atıldı!**`)
-        channel.send(`@everyone`, { embed: jahky })
     });
 
     //-------------------------------------------------------------\\
@@ -1272,36 +1242,6 @@
         }
     });
 
-    client1.on("guildBanRemove", async (guild, user) => {
-        const entry = await member.guild
-            .fetchAuditLogs({ type: "MEMBER_BAN_REMOVE" })
-            .then(audit => audit.entries.first());
-        if (!entry || !entry.executor || Date.now() - entry.createdTimestamp > 10000) return;
-        if (matthe1.bots.includes(entry.executor.id)) return;
-        if (matthe1.owners.includes(entry.executor.id)) return;
-        if (matthe1.guvenlid.includes(entry.executor.id)) return;
-        entry.roles.set([ayarlar1.karantinarol]).catch(err => { })
-        member.guild.membes.ban(entry.executor.id, { reason: "İzinsiz Ban Açma!" });
-        member.guild.members.ban(user.id, { reason: "Ban Açma Koruma Sistemi!" });
-        let channel = client1.channels.cache.get(ayarlar1.log1)
-        if (!channel) return console.log('Ban Açma Koruma Logu Yok!');
-        const jahky = new Discord.MessageEmbed()
-            .setTimestamp()
-            .setColor(ayarlar1.color)
-            .setFooter(ayarlar1.footer)
-            .setDescription(`
-  **İzinsiz Ban Açıldı!**
-  
-  **Yetkili Bilgisi**
-  **${entry.executor.tag}** **||** **${entry.executor.id}**
-  
-  **Kullanıcı Bilgisi Bilgisi**
-  **${user.tag}** **||** **${user.id}**
-  
-  **Kullanıcı Yeniden Banlandı ve yetkili jaile atıldı!**`)
-        channel.send({ embed: jahky })
-    });
-
     //-------------------------------------------------------------\\
 
     const Discord2 = require("discord.js");
@@ -1923,36 +1863,6 @@
             channel.send({ embed: jahky })
             return client2.users.cache.get(ayarlar2.sahip).send(`**Sunucuya Bir Bot Eklendi! Eklenen Botun Bilgileri Ve Ekliyen Kişinin Bilgileri :** \n**Botun Adı :** \`\`${member.user.tag}\`\` **Botun İdsi :** \`\`${member.id}\`\` \n**Kullanıcı Adı :** \`\`${xd.tag}\`\` **Kullanıcı İdsi :** \`\`${xd.id}\`\``)
         }
-    });
-
-    client2.on("guildBanRemove", async (guild, user) => {
-        const entry = await member.guild
-            .fetchAuditLogs({ type: "MEMBER_BAN_REMOVE" })
-            .then(audit => audit.entries.first());
-        if (!entry || !entry.executor || Date.now() - entry.createdTimestamp > 20000) return;
-        if (matthe2.bots.includes(entry.executor.id)) return;
-        if (matthe2.owners.includes(entry.executor.id)) return;
-        if (matthe2.guvenlid.includes(entry.executor.id)) return;
-        entry.roles.set([ayarlar2.karantinarol]).catch(err => { })
-        member.guild.membes.ban(entry.executor.id, { reason: "İzinsiz Ban Açma!" });
-        member.guild.members.ban(user.id, { reason: "Ban Açma Koruma Sistemi!" });
-        let channel = client2.channels.cache.get(ayarlar2.log2)
-        if (!channel) return console.log('Ban Açma Koruma Logu Yok!');
-        const jahky = new Discord.MessageEmbed()
-            .setTimestamp()
-            .setColor(ayarlar2.color)
-            .setFooter(ayarlar2.footer)
-            .setDescription(`
-  **İzinsiz Ban Açıldı!**
-  
-  **Yetkili Bilgisi**
-  **${entry.executor.tag}** **||** **${entry.executor.id}**
-  
-  **Kullanıcı Bilgisi Bilgisi**
-  **${user.tag}** **||** **${user.id}**
-  
-  **Kullanıcı Yeniden Banlandı ve yetkili jaile atıldı!**`)
-        channel.send({ embed: jahky })
     });
 
     ///////////////////////////////////////////////////////////
