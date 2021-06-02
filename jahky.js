@@ -1,4 +1,4 @@
-{
+  {
     const Discord = require("discord.js");
     const ayarlar = require('./ayarlar.json')
     const matthe = require('./matthe.json')
