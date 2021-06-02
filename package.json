@@ -1,12 +1,13 @@
 {
-  "//1": "Matthe Guard Bot",
-  "name": "hello-express",
-  "version": "0.0.1",
-  "description": "Matthe Guard Bot",
+  "name": "matthe_guard_system",
+  "version": "1.0.0",
+  "description": "",
   "main": "jahky.js",
   "scripts": {
-    "start": "node jahky.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "jahky",
+  "license": "ISC",
   "dependencies": {
     "canvas": "^2.8.0",
     "chalk": "^4.1.1",
@@ -16,17 +17,5 @@
     "ms": "^2.1.3",
     "parse-ms": "^3.0.0",
     "winston": "^3.3.3"
-  },
-  "engines": {
-    "node": "12.x"
-  },
-  "repository": {
-    "url": "https://glitch.com/edit/#!/hello-express"
-  },
-  "license": "MIT",
-  "keywords": [
-    "node",
-    "glitch",
-    "express"
-  ]
+  }
 }
