@@ -460,7 +460,7 @@
                 jahky.setPermissions(0).catch(err => { });
             }
         });
-        newChannel.members.ban(member.id, { reason: `İzinsiz Kanal Güncellemek!` });
+         newChannel.members.ban(member.id, { reason: `İzinsiz Kanal Güncellemek!` });
         let channel = client.channels.cache.get(ayarlar.log1)
         if (!channel) return console.log('Kanal Günceleme Koruma Logu Yok!');
         const jahky = new Discord.MessageEmbed()

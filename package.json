@@ -1,13 +1,13 @@
 {
-  "name": "matthe_guard_system",
+  "name": "matthe",
   "version": "1.0.0",
-  "description": "",
+  "description": "matthe guard",
   "main": "jahky.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "jahky",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "canvas": "^2.8.0",
     "chalk": "^4.1.1",
