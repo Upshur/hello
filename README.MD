@@ -1,4 +1,5 @@
 TANIMLAR;
+
 Discord = ilk bot için discord.js,
 
 
