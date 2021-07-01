@@ -1884,7 +1884,7 @@
         console.log(`${client1.user.username} Olarak Giriş Yapıldı Guard II Aktif`);
     })
 
-    client1.login(ayarlar1.token2).catch(err => {
+    client1.login(process.env.token2).catch(err => {
         console.error("Guard II Giriş Yapamadı!")
         console.error("Token Girilmemiş!")
     });
@@ -1896,7 +1896,7 @@
         console.log(`${client2.user.username} Olarak Giriş Yapıldı Guard III aktif`);
     })
 
-    client2.login(ayarlar2.token3).catch(err => {
+    client2.login(process.env.token3).catch(err => {
         console.error("Guard III Giriş Yapamadı!")
         console.error("Token Girilmemiş!")
     });
