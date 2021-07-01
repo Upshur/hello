@@ -1872,7 +1872,7 @@
         console.log(`${client.user.username} Olarak Giriş Yapıldı Guard I Aktif`)
     });
 
-    client.login(ayarlar.token1).catch(err => {
+    client.login(process.env.token1).catch(err => {
         console.error("Guard I Giriş Yapamadı!")
         console.error("Token Girilmemiş!")
     });

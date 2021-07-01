@@ -1,4 +1,7 @@
 {
+    "OKUMADANGECME" : "Aşağıdaki tamamen boş bırakılan yerlere ID girin OKUDUKTAN SONRA burayı silebilirsiniz.",
+    "OKUMADANGECME2" : "TOKEN .env kısmında TOKEN yazan yerin karşısına tokeninizi yapıştırınız.",
+  
     "url": "SUNUCU URLNİZ YOKSA BİR ŞEYLER SALLA XD",
     "status": "dnd",
     "color": "RANDOM",
@@ -7,10 +10,5 @@
     "log1": "GUARD LOG",
     "sahip": "SAHİP ID",
     "sunucuid": "SUNUCU ID",
-    "karantinarol": "CEZALI ROL ID",
-
-
-    "token1": "TOKEN 1 İSTERSEN GİZLEYEBİLİRSİN YOUTUBEDE VİDEOLARI VAR BİZE SORMA!",
-    "token2": "TOKEN 2 İSTERSEN GİZLEYEBİLİRSİN YOUTUBEDE VİDEOLARI VAR BİZE SORMA!",
-    "token3": "TOKEN 3 İSTERSEN GİZLEYEBİLİRSİN YOUTUBEDE VİDEOLARI VAR BİZE SORMA!"
+    "karantinarol": "CEZALI ROL ID"
 }
